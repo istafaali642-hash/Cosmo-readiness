@@ -1,0 +1,1588 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>COSMO–Rufus Content Upgrade Dashboard — RDX Gel Padded Inner Gloves (HYP-IS2)</title>
+
+  <style>
+    :root{
+      /* White + Gold + Navy (clean, modern, “premium”) */
+      --bg:#fbfbfd;
+      --paper:#ffffff;
+      --ink:#0b1220;           /* main text */
+      --muted:#5b6473;         /* secondary text */
+      --muted2:#7a8391;
+
+      --navy:#0b1730;          /* deep anchor */
+      --navy2:#142a52;
+      --gold:#c9a24a;          /* premium gold */
+      --gold2:#f0d48a;         /* soft gold highlight */
+      --gold3:#ffe9b8;
+
+      --green:#12b981;
+      --amber:#f59e0b;
+      --red:#ef476f;
+      --blue:#3b82f6;
+
+      --stroke:rgba(11,18,32,.12);
+      --stroke2:rgba(11,18,32,.08);
+      --shadow:0 14px 38px rgba(11,18,32,.10);
+
+      --radius:18px;
+      --radius2:14px;
+
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+
+      --ease:cubic-bezier(.2,.9,.2,1);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 520px at 15% 10%, rgba(201,162,74,.22), transparent 55%),
+        radial-gradient(900px 480px at 85% 15%, rgba(11,23,48,.10), transparent 58%),
+        radial-gradient(900px 620px at 52% 92%, rgba(59,130,246,.08), transparent 60%),
+        linear-gradient(180deg, var(--bg), #ffffff 55%, #fafafa);
+      overflow-x:hidden;
+    }
+
+    /* subtle grid */
+    body:before{
+      content:"";
+      position:fixed; inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(to right, rgba(11,18,32,.06) 1px, transparent 1px) 0 0/54px 54px,
+        linear-gradient(to bottom, rgba(11,18,32,.05) 1px, transparent 1px) 0 0/54px 54px;
+      opacity:.20;
+      mix-blend-mode:multiply;
+    }
+
+    .wrap{
+      position:relative;
+      max-width:1280px;
+      margin:0 auto;
+      padding:26px 18px 40px;
+    }
+
+    /* ===== HEADER ===== */
+    .topbar{
+      position:relative;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .logo{
+      width:46px;height:46px;
+      border-radius:14px;
+      background:linear-gradient(180deg, #ffffff, #f7f7f7);
+      border:1px solid var(--stroke);
+      box-shadow:var(--shadow);
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      position:relative;
+    }
+    .logo img{
+      width:70%;
+      height:auto;
+      display:block;
+      transform:translateZ(0);
+      filter:drop-shadow(0 10px 18px rgba(11,18,32,.10));
+    }
+    .titleBlock{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .titleBlock h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+      font-weight:900;
+      line-height:1.15;
+    }
+    .subline{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      color:var(--muted);
+      font-size:12px;
+      align-items:center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.85);
+      border:1px solid var(--stroke2);
+      box-shadow:0 10px 24px rgba(11,18,32,.06);
+      backdrop-filter: blur(10px);
+      white-space:nowrap;
+    }
+    .pill b{color:var(--navy); font-weight:900}
+    .pill .sku{color:var(--gold); font-weight:950}
+
+    .actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, #ffffff, #fafafa);
+      box-shadow:0 12px 26px rgba(11,18,32,.08);
+      color:var(--ink);
+      font-weight:850;
+      font-size:12px;
+      cursor:pointer;
+      transition:transform .15s var(--ease), box-shadow .15s var(--ease);
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 16px 34px rgba(11,18,32,.10)}
+    .btn:active{transform:translateY(0px)}
+    .btn .ico{
+      width:10px;height:10px;border-radius:999px;
+      background:radial-gradient(circle at 30% 30%, var(--gold3), var(--gold));
+      box-shadow:0 0 0 4px rgba(201,162,74,.18);
+      flex:0 0 auto;
+    }
+    .btn.secondary .ico{
+      background:radial-gradient(circle at 30% 30%, #cfe1ff, var(--blue));
+      box-shadow:0 0 0 4px rgba(59,130,246,.16);
+    }
+
+    /* ===== GRID ===== */
+    .grid{
+  position:relative;
+  display:grid;
+  grid-template-columns: 1fr;  /* ✅ ONE COLUMN */
+  gap:14px;
+}
+
+    }
+    @media (max-width: 980px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* ===== CARD ===== */
+    .card{
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--stroke2);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:linear-gradient(90deg, rgba(201,162,74,.25), rgba(11,23,48,.08), rgba(201,162,74,.18));
+      opacity:.35;
+      filter:blur(18px);
+      z-index:0;
+      pointer-events:none;
+    }
+    .card > *{position:relative; z-index:1}
+
+    .cardHeader{
+      padding:16px 16px 12px;
+      border-bottom:1px solid var(--stroke2);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:flex-end;
+      flex-wrap:wrap;
+      background:linear-gradient(90deg, rgba(201,162,74,.18), rgba(255,255,255,.0));
+    }
+    .cardHeader h2{
+      margin:0;
+      font-size:13px;
+      letter-spacing:.25px;
+      font-weight:950;
+      color:var(--navy);
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .cardHeader h2 .mark{
+      width:8px;height:8px;border-radius:999px;
+      background:var(--gold);
+      box-shadow:0 0 0 4px rgba(201,162,74,.16);
+    }
+    .hint{font-size:12px;color:var(--muted)}
+    .cardBody{padding:16px}
+
+    /* ===== KPI ===== */
+    .kpiRow{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+    }
+    @media (max-width: 980px){ .kpiRow{grid-template-columns:1fr} }
+
+    .kpi{
+      border:1px solid var(--stroke2);
+      border-radius:var(--radius2);
+      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(250,250,250,.86));
+      padding:14px;
+      box-shadow:0 10px 20px rgba(11,18,32,.06);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+    }
+    .kpi .label{
+      font-size:11px;
+      letter-spacing:.3px;
+      text-transform:uppercase;
+      color:var(--muted2);
+      font-weight:800;
+    }
+    .kpi .value{
+      margin-top:6px;
+      font-size:18px;
+      font-weight:950;
+      color:var(--navy);
+      line-height:1;
+    }
+    .kpi .value .arr{color:rgba(11,23,48,.35); font-weight:950; margin:0 6px}
+    .kpi .delta{
+      font-size:12px;
+      font-weight:950;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(201,162,74,.35);
+      background:rgba(201,162,74,.10);
+      color:var(--navy);
+      white-space:nowrap;
+    }
+
+    /* ===== PROGRESS BARS (animated) ===== */
+    .bars{margin-top:14px; display:grid; gap:12px}
+    .barRow{
+      display:grid;
+      grid-template-columns: 160px 1fr;
+      gap:12px;
+      align-items:center;
+    }
+    @media (max-width: 560px){
+      .barRow{grid-template-columns:1fr}
+    }
+    .barRow .name{
+      font-size:12px;
+      color:var(--muted);
+      font-weight:850;
+    }
+    .track{
+      height:12px;
+      border-radius:999px;
+      background:rgba(11,18,32,.06);
+      border:1px solid var(--stroke2);
+      overflow:hidden;
+      position:relative;
+    }
+    .track:before{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(to right, rgba(11,18,32,.10) 1px, transparent 1px) 0 0/10% 100%;
+      opacity:.25;
+      pointer-events:none;
+    }
+    .fill{
+      height:100%;
+      width:0%;
+      border-radius:999px;
+      background:linear-gradient(90deg, var(--navy2), var(--gold));
+      box-shadow:0 12px 24px rgba(201,162,74,.22);
+      transition:width 1.2s var(--ease);
+    }
+    .fill.blue{background:linear-gradient(90deg, var(--blue), #a6c8ff)}
+    .fill.amber{background:linear-gradient(90deg, var(--amber), #ffe1a3)}
+    .nums{
+      margin-top:6px;
+      font-size:12px;
+      color:var(--muted2);
+      font-weight:800;
+    }
+
+    /* ===== PANELS / LISTS ===== */
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 980px){ .twoCol{grid-template-columns:1fr} }
+
+    .panel{
+      border:1px solid var(--stroke2);
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.90);
+      padding:14px;
+      box-shadow:0 10px 18px rgba(11,18,32,.05);
+    }
+    .panelTitle{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:10px;
+    }
+    .panelTitle h3{
+      margin:0;
+      font-size:13px;
+      font-weight:950;
+      color:var(--navy);
+      letter-spacing:.2px;
+    }
+    .tag{
+      font-size:11px;
+      font-weight:900;
+      padding:6px 9px;
+      border-radius:999px;
+      border:1px solid var(--stroke2);
+      background:rgba(11,18,32,.03);
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    ul.clean{
+      margin:0;
+      padding-left:18px;
+      font-size:13px;
+      color:var(--ink);
+      line-height:1.45;
+    }
+    ul.clean li{margin:6px 0}
+
+    .good{color:var(--green); font-weight:900}
+    .warn{color:var(--amber); font-weight:900}
+    .bad{color:var(--red); font-weight:900}
+
+    /* ===== COSMO GRID ===== */
+    .cosmoGrid{display:grid;gap:10px}
+    .cosmoRow{
+      display:grid;
+      grid-template-columns: 1.4fr .8fr .8fr;
+      gap:10px;
+      align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--stroke2);
+      border-radius:14px;
+      background:rgba(11,18,32,.02);
+    }
+    .cosmoRow .k{font-size:12px;color:var(--muted);font-weight:900}
+    .badge{
+      width:100%;
+      text-align:center;
+      font-size:12px;
+      font-weight:950;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--stroke2);
+      background:#fff;
+      color:var(--navy);
+    }
+    .b-ok{background:rgba(18,185,129,.10); border-color:rgba(18,185,129,.25)}
+    .b-mid{background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.25)}
+    .b-no{background:rgba(239,71,111,.10); border-color:rgba(239,71,111,.25)}
+
+    /* ===== Q&A GRID ===== */
+    .qGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 980px){ .qGrid{grid-template-columns:1fr} }
+
+    .qItem{
+      border:1px solid var(--stroke2);
+      background:rgba(11,18,32,.02);
+      border-radius:16px;
+      padding:12px;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      margin-top:3px;
+      flex:0 0 auto;
+      box-shadow:0 0 0 4px rgba(11,18,32,.06);
+    }
+    .dot.ok{background:var(--green)}
+    .dot.mid{background:var(--amber)}
+    .dot.no{background:var(--red)}
+    .qItem .t{font-size:13px;font-weight:950;color:var(--navy)}
+    .qItem .d{margin-top:4px;font-size:12px;color:var(--muted);line-height:1.35}
+
+    /* ===== SCROLL BOX (content highlights) ===== */
+    .scrollBox{
+      border:1px solid var(--stroke2);
+      border-radius:16px;
+      background:rgba(11,18,32,.03);
+      padding:12px;
+      max-height:210px;
+      overflow:auto;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.55);
+    }
+    .scrollBox p{
+      margin:0;
+      font-family:var(--mono);
+      font-size:12px;
+      color:rgba(11,18,32,.82);
+      line-height:1.55;
+      white-space:pre-wrap;
+    }
+    .scrollBox::-webkit-scrollbar{height:10px;width:10px}
+    .scrollBox::-webkit-scrollbar-thumb{
+      background:rgba(201,162,74,.45);
+      border:2px solid rgba(255,255,255,.6);
+      border-radius:999px;
+    }
+    .scrollBox::-webkit-scrollbar-track{background:rgba(11,18,32,.05);border-radius:999px}
+
+    .divider{height:1px;background:rgba(11,18,32,.10);margin:14px 0}
+
+    /* ===== OUTCOME CHIPS ===== */
+    .chipRow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--stroke2);
+      background:#fff;
+      box-shadow:0 10px 20px rgba(11,18,32,.06);
+      font-size:12px;
+      font-weight:900;
+      color:#17171a;
+    }
+    .chip strong{color:#d10000 ; font-weight:950}
+
+    /* ===== PRINT (PDF) ===== */
+    @media print{
+      body{background:#fff}
+      body:before{display:none}
+      .actions{display:none !important}
+      .wrap{padding:0}
+      .card{box-shadow:none}
+      .card:before{display:none}
+      .pill{box-shadow:none}
+    }
+/* ===== Score-at-a-glance strip (TOP) ===== */
+.scoreHero{
+  display:flex;
+  align-items:stretch;
+  gap:12px;
+  padding:10px 12px;
+  border-radius:18px;
+  border:1px solid var(--stroke2);
+  background:linear-gradient(90deg, rgba(11,23,48,.06), rgba(201,162,74,.14), rgba(11,23,48,.06));
+  box-shadow:0 14px 28px rgba(11,18,32,.08);
+  min-width: 420px;
+}
+
+.scoreBox{
+  flex:1 1 0;
+  border-radius:16px;
+  border:1px solid var(--stroke2);
+  background:rgba(255,255,255,.92);
+  padding:10px 12px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.scoreBox .lbl{
+  font-size:11px;
+  letter-spacing:.35px;
+  font-weight:950;
+  color:var(--muted);
+}
+
+.scoreBox .num{
+  margin-top:6px;
+  font-size:34px;          /* BIG */
+  font-weight:1000;        /* BOLD */
+  line-height:1;
+  color:var(--navy);
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+}
+
+.scoreBox .unit{
+  font-size:14px;
+  font-weight:900;
+  color:var(--muted2);
+}
+
+.scoreMid{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-width:88px;
+  border-radius:16px;
+  border:1px solid rgba(201,162,74,.30);
+  background:rgba(255,255,255,.86);
+  padding:10px 10px;
+}
+
+.scoreMid .arrow{
+  font-size:20px;
+  font-weight:1000;
+  color:var(--navy);
+  line-height:1;
+  transform:translateY(-2px);
+}
+
+.scoreMid .lift{
+  margin-top:8px;
+  font-size:13px;
+  font-weight:1000;
+  color:var(--gold);
+  letter-spacing:.2px;
+}
+
+/* subtle “pop” animation */
+.scoreHero{
+  animation: scorePop .55s var(--ease) both;
+}
+@keyframes scorePop{
+  from{transform:translateY(-6px); opacity:0}
+  to{transform:translateY(0); opacity:1}
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .scoreHero{min-width:unset; width:100%}
+}
+@media (max-width: 520px){
+  .scoreBox .num{font-size:30px}
+  .scoreMid{min-width:74px}
+}
+/* ===== Center the top score strip ===== */
+.scoreHeroWrap{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:10px;
+}
+
+/* Larger version */
+.scoreHeroXL{
+  min-width: 760px;
+  padding:16px 18px;
+  gap:16px;
+  align-items:center;
+}
+
+@media (max-width: 980px){
+  .scoreHeroXL{min-width:unset;width:100%}
+}
+
+/* Each side: Gauge + Big number */
+.scoreUnit{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.scoreLabel .lbl{
+  font-size:12px;
+  letter-spacing:.35px;
+  font-weight:950;
+  color:var(--muted);
+}
+
+.scoreLabel .num{
+  margin-top:6px;
+  font-size:46px;          /* BIGGER */
+  font-weight:1000;        /* BOLD */
+  line-height:1;
+  color:var(--navy);
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+}
+.scoreLabel .unit{
+  font-size:16px;
+  font-weight:900;
+  color:var(--muted2);
+}
+
+/* Middle (arrow + lift) larger */
+.scoreMidXL{
+  min-width:110px;
+  padding:14px 12px;
+}
+.scoreMidXL .arrow{font-size:26px}
+.scoreMidXL .lift{font-size:15px}
+
+/* ===== Circular Gauge ===== */
+.gauge{
+  width:92px;
+  height:92px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+}
+
+.gsvg{
+  width:92px;height:92px;
+  transform:rotate(-90deg);
+  overflow:visible;
+}
+
+.gTrack{
+  fill:none;
+  stroke:rgba(11,18,32,.10);
+  stroke-width:12;
+}
+
+.gProg{
+  fill:none;
+  stroke-width:12;
+  stroke-linecap:round;
+  stroke-dasharray: 289;     /* approx circumference for r=46 */
+  stroke-dashoffset: 289;    /* start empty */
+  filter: drop-shadow(0 10px 16px rgba(11,18,32,.10));
+  transition: stroke-dashoffset 1.2s var(--ease);
+}
+
+/* Before = navy-ish, After = gold */
+.gProg.gBefore{ stroke: linear-gradient(90deg, var(--navy2), var(--blue)); }
+.gProg.gAfter{  stroke: var(--gold); }
+
+/* Fallback solid strokes (since SVG stroke gradients need defs) */
+.gProg.gBefore{ stroke: var(--navy2); }
+.gProg.gAfter{  stroke: var(--gold); }
+
+.gText{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  pointer-events:none;
+}
+
+.gSmall{
+  font-size:10px;
+  font-weight:1000;
+  letter-spacing:.35px;
+  color:var(--muted2);
+}
+
+.gNum{
+  margin-top:2px;
+  font-size:16px;
+  font-weight:1000;
+  color:var(--navy);
+  line-height:1;
+}
+.gUnit{
+  margin-top:2px;
+  font-size:10px;
+  font-weight:950;
+  color:var(--muted);
+}
+
+/* Pop-in animation */
+.scoreHeroWrap{
+  animation: scorePop .55s var(--ease) both;
+}
+/* ===== Sidebar Navigation (added) ===== */
+:root{
+  --sideW: 248px;
+}
+
+.wrap{
+  padding-left: calc(18px + var(--sideW) + 16px);
+}
+
+.sideNav{
+  position: fixed;
+  top: 22px;
+  left: 18px;
+  width: var(--sideW);
+  max-height: calc(100vh - 44px);
+  overflow:auto;
+  z-index: 50;
+
+  border-radius: 18px;
+  border: 1px solid var(--stroke2);
+  background: rgba(255,255,255,.90);
+  box-shadow: 0 18px 40px rgba(11,18,32,.10);
+  backdrop-filter: blur(10px);
+}
+
+.sideNavHead{
+  padding: 14px 14px 12px;
+  border-bottom: 1px solid var(--stroke2);
+  background: linear-gradient(90deg, rgba(201,162,74,.14), rgba(255,255,255,.0));
+}
+
+.sideNavTitle{
+  font-weight: 1000;
+  color: var(--navy);
+  letter-spacing: .2px;
+  font-size: 13px;
+}
+
+.sideNavSub{
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.sideNavLinks{
+  padding: 10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.navLink{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  text-decoration:none;
+
+  color: var(--navy);
+  font-weight: 950;
+  font-size: 12px;
+
+  background: rgba(11,18,32,.02);
+  transition: transform .12s var(--ease), background .12s var(--ease), border-color .12s var(--ease);
+}
+
+.navLink:before{
+  content:"";
+  width:8px;height:8px;border-radius:999px;
+  background: rgba(201,162,74,.55);
+  box-shadow: 0 0 0 4px rgba(201,162,74,.14);
+  flex:0 0 auto;
+}
+
+.navLink:hover{
+  transform: translateY(-1px);
+  background: rgba(201,162,74,.10);
+  border-color: rgba(201,162,74,.25);
+}
+
+.navLink.active{
+  background: rgba(11,23,48,.06);
+  border-color: rgba(11,23,48,.18);
+}
+
+html{scroll-behavior:smooth}
+
+/* Sidebar scroll styling */
+.sideNav::-webkit-scrollbar{width:10px}
+.sideNav::-webkit-scrollbar-thumb{
+  background: rgba(201,162,74,.45);
+  border:2px solid rgba(255,255,255,.6);
+  border-radius:999px;
+}
+.sideNav::-webkit-scrollbar-track{background:rgba(11,18,32,.05);border-radius:999px}
+
+/* Responsive: collapse sidebar */
+@media (max-width: 980px){
+  .sideNav{display:none}
+  .wrap{padding-left:18px}
+}
+
+/* Print: hide sidebar */
+@media print{
+  .sideNav{display:none !important}
+  .wrap{padding-left:0 !important}
+}
+/* ===============================
+   DARK THEME (Wrist-Wraps style)
+   Usage:
+   - Default = your current gold/white
+   - Dark = add: <body class="theme-dark">
+================================= */
+
+body.theme-dark{
+  /* variable overrides */
+  --bg:#070A12;
+  --paper:rgba(255,255,255,.06);
+  --ink:#EAF0FF;
+  --muted:rgba(234,240,255,.72);
+  --muted2:rgba(234,240,255,.55);
+
+  --navy:#EAF0FF;
+  --navy2:#B7C6FF;
+
+  /* keep a premium gold accent */
+  --gold:#f0c35a;
+  --gold2:#ffd98b;
+  --gold3:#ffe9b8;
+
+  --stroke:rgba(234,240,255,.14);
+  --stroke2:rgba(234,240,255,.10);
+  --shadow:0 18px 50px rgba(0,0,0,.55);
+}
+
+/* page background */
+body.theme-dark{
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 700px at 10% 10%, rgba(92,110,255,.22), transparent 58%),
+    radial-gradient(900px 600px at 92% 18%, rgba(240,195,90,.14), transparent 55%),
+    radial-gradient(900px 700px at 55% 95%, rgba(70,190,255,.10), transparent 60%),
+    linear-gradient(180deg, #070A12 0%, #070A12 45%, #050713 100%) !important;
+}
+
+/* grid overlay in dark */
+body.theme-dark:before{
+  opacity:.12;
+  mix-blend-mode:normal;
+  background:
+    linear-gradient(to right, rgba(234,240,255,.06) 1px, transparent 1px) 0 0/54px 54px,
+    linear-gradient(to bottom, rgba(234,240,255,.05) 1px, transparent 1px) 0 0/54px 54px;
+}
+
+/* cards */
+body.theme-dark .card{
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05)) !important;
+  border-color: var(--stroke2) !important;
+  box-shadow: var(--shadow) !important;
+}
+body.theme-dark .card:before{
+  background:linear-gradient(90deg, rgba(240,195,90,.20), rgba(120,140,255,.14), rgba(240,195,90,.14));
+  opacity:.45;
+}
+
+/* card header */
+body.theme-dark .cardHeader{
+  border-bottom-color: var(--stroke2) !important;
+  background: linear-gradient(90deg, rgba(240,195,90,.14), rgba(255,255,255,0)) !important;
+}
+body.theme-dark .cardHeader h2{ color:var(--ink) !important; }
+body.theme-dark .hint{ color:var(--muted) !important; }
+
+/* pills + sidebar */
+body.theme-dark .pill,
+body.theme-dark .sideNav{
+  background: rgba(255,255,255,.06) !important;
+  border-color: var(--stroke2) !important;
+  box-shadow: 0 18px 40px rgba(0,0,0,.40) !important;
+  color: var(--muted) !important;
+}
+body.theme-dark .pill b{ color:var(--ink) !important; }
+body.theme-dark .pill .sku{ color:var(--gold) !important; }
+
+body.theme-dark .sideNavHead{
+  border-bottom-color: var(--stroke2) !important;
+  background: linear-gradient(90deg, rgba(240,195,90,.12), rgba(255,255,255,0)) !important;
+}
+body.theme-dark .sideNavTitle{ color:var(--ink) !important; }
+body.theme-dark .sideNavSub{ color:var(--muted) !important; }
+
+body.theme-dark .navLink{
+  background: rgba(255,255,255,.04) !important;
+  color: var(--ink) !important;
+}
+body.theme-dark .navLink:hover{
+  background: rgba(240,195,90,.10) !important;
+  border-color: rgba(240,195,90,.22) !important;
+}
+body.theme-dark .navLink.active{
+  background: rgba(92,110,255,.16) !important;
+  border-color: rgba(92,110,255,.22) !important;
+}
+
+/* KPI + panels */
+body.theme-dark .kpi,
+body.theme-dark .panel{
+  background: rgba(255,255,255,.06) !important;
+  border-color: var(--stroke2) !important;
+  color: var(--ink) !important;
+}
+body.theme-dark .kpi .label{ color: var(--muted2) !important; }
+body.theme-dark .kpi .value{ color: var(--ink) !important; }
+body.theme-dark .kpi .delta{
+  background: rgba(240,195,90,.12) !important;
+  border-color: rgba(240,195,90,.25) !important;
+  color: var(--ink) !important;
+}
+body.theme-dark .panelTitle h3{ color:var(--ink) !important; }
+body.theme-dark .tag{
+  background: rgba(255,255,255,.05) !important;
+  border-color: var(--stroke2) !important;
+  color: var(--muted) !important;
+}
+
+/* lists + body text */
+body.theme-dark ul.clean{ color: var(--ink) !important; }
+body.theme-dark .qItem{
+  background: rgba(255,255,255,.04) !important;
+  border-color: var(--stroke2) !important;
+}
+body.theme-dark .qItem .t{ color: var(--ink) !important; }
+body.theme-dark .qItem .d{ color: var(--muted) !important; }
+
+body.theme-dark .cosmoRow{
+  background: rgba(255,255,255,.04) !important;
+  border-color: var(--stroke2) !important;
+}
+body.theme-dark .cosmoRow .k{ color: var(--muted) !important; }
+body.theme-dark .badge{
+  background: rgba(255,255,255,.06) !important;
+  border-color: var(--stroke2) !important;
+  color: var(--ink) !important;
+}
+
+/* progress bars */
+body.theme-dark .track{
+  background: rgba(255,255,255,.06) !important;
+  border-color: var(--stroke2) !important;
+}
+body.theme-dark .fill{
+  background: linear-gradient(90deg, rgba(92,110,255,1), rgba(240,195,90,1)) !important;
+  box-shadow: 0 14px 28px rgba(240,195,90,.18) !important;
+}
+body.theme-dark .fill.blue{
+  background: linear-gradient(90deg, rgba(70,190,255,1), rgba(92,110,255,1)) !important;
+}
+body.theme-dark .fill.amber{
+  background: linear-gradient(90deg, rgba(240,195,90,1), rgba(255,217,139,1)) !important;
+}
+body.theme-dark .nums{ color: var(--muted2) !important; }
+
+/* score hero strip */
+body.theme-dark .scoreHero{
+  background: linear-gradient(90deg, rgba(255,255,255,.04), rgba(240,195,90,.10), rgba(92,110,255,.10)) !important;
+  border-color: var(--stroke2) !important;
+}
+body.theme-dark .scoreMid,
+body.theme-dark .scoreBox{
+  background: rgba(255,255,255,.06) !important;
+  border-color: var(--stroke2) !important;
+}
+body.theme-dark .scoreLabel .num{ color: var(--ink) !important; }
+body.theme-dark .scoreLabel .lbl{ color: var(--muted2) !important; }
+body.theme-dark .scoreLabel .unit{ color: var(--muted2) !important; }
+
+/* gauges */
+body.theme-dark .gTrack{ stroke: rgba(234,240,255,.16) !important; }
+body.theme-dark .gProg.gBefore{ stroke: rgba(92,110,255,1) !important; }
+body.theme-dark .gProg.gAfter{ stroke: rgba(240,195,90,1) !important; }
+body.theme-dark .gSmall{ color: var(--muted2) !important; }
+body.theme-dark .gNum{ color: var(--ink) !important; }
+body.theme-dark .gUnit{ color: var(--muted2) !important; }
+
+/* buttons */
+body.theme-dark .btn{
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05)) !important;
+  border-color: var(--stroke2) !important;
+  color: var(--ink) !important;
+}
+body.theme-dark .btn .ico{
+  box-shadow: 0 0 0 4px rgba(240,195,90,.16) !important;
+}
+
+/* scrollbox */
+body.theme-dark .scrollBox{
+  background: rgba(255,255,255,.04) !important;
+  border-color: var(--stroke2) !important;
+}
+body.theme-dark .scrollBox p{
+  color: rgba(234,240,255,.82) !important;
+}
+
+
+  </style>
+</head>
+
+<body class="theme-dark">
+<!-- SIDEBAR NAV (added, no refactor) -->
+<aside class="sideNav" aria-label="Dashboard navigation">
+  <div class="sideNavHead">
+    <div class="sideNavTitle">Navigation</div>
+    <div class="sideNavSub">Jump to section</div>
+  </div>
+
+  <nav class="sideNavLinks">
+    <a href="#sec-scores" class="navLink">Score Overview</a>
+    <a href="#sec-gaps" class="navLink">Gap Analysis</a>
+    <a href="#sec-cosmo" class="navLink">COSMO Coverage</a>
+    <a href="#sec-rufus" class="navLink">Rufus Q&A</a>
+    <a href="#sec-highlights" class="navLink">Content Highlights</a>
+    <a href="#sec-outcome" class="navLink">Final Outcome</a>
+  </nav>
+</aside>
+
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-label="Company Logo">
+          <!-- Embedded logo (you said you'll provide; already placed here). Replace if needed. -->
+          <img alt="RDX" src="C:\Users\istifa.ali\Desktop\1x1 RDX.png" />
+        </div>
+        <div class="titleBlock">
+          <h1>COSMO–Rufus Content Upgrade Dashboard</h1>
+          <div class="subline">
+            <span class="pill">Product: <b>RDX Gel Padded Inner Gloves</b></span>
+            <span class="pill">SKU: <span class="sku">HYP-IS2</span></span>
+            <span class="pill">Scope: <b>Title + Bullets + Description</b></span>
+            <span class="pill">Before vs After Optimization</span>
+          </div>
+        </div>
+      </div>
+<!-- SCORE AT A GLANCE (Centered + Gauges) -->
+<div class="scoreHeroWrap" aria-label="Score improvement at a glance">
+  <div class="scoreHero scoreHeroXL">
+    <!-- BEFORE -->
+    <div class="scoreUnit">
+      <div class="gauge" data-value="71" data-label="Before">
+        <svg viewBox="0 0 120 120" class="gsvg" aria-hidden="true">
+          <circle class="gTrack" cx="60" cy="60" r="46"></circle>
+          <circle class="gProg gBefore" cx="60" cy="60" r="46"></circle>
+        </svg>
+        <div class="gText">
+          <div class="gSmall">BEFORE</div>
+          <div class="gNum"><span class="count" data-from="0" data-to="71">71</span></div>
+          <div class="gUnit">/100</div>
+        </div>
+      </div>
+
+      <div class="scoreLabel">
+        <div class="lbl">BEFORE</div>
+        <div class="num"><span class="count" data-from="0" data-to="71">71</span><span class="unit">/100</span></div>
+      </div>
+    </div>
+
+    <!-- MID -->
+    <div class="scoreMid scoreMidXL">
+      <div class="arrow">→</div>
+      <div class="lift">+<span class="count" data-from="0" data-to="26">26</span> pts</div>
+    </div>
+
+    <!-- AFTER -->
+    <div class="scoreUnit">
+      <div class="gauge" data-value="97" data-label="After">
+        <svg viewBox="0 0 120 120" class="gsvg" aria-hidden="true">
+          <circle class="gTrack" cx="60" cy="60" r="46"></circle>
+          <circle class="gProg gAfter" cx="60" cy="60" r="46"></circle>
+        </svg>
+        <div class="gText">
+          <div class="gSmall">AFTER</div>
+          <div class="gNum"><span class="count" data-from="0" data-to="97">97</span></div>
+          <div class="gUnit">/100</div>
+        </div>
+      </div>
+
+      <div class="scoreLabel">
+        <div class="lbl">AFTER</div>
+        <div class="num"><span class="count" data-from="0" data-to="97">97</span><span class="unit">/100</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="actions">
+        <button class="btn secondary" id="btnShare" type="button" title="Copy a quick summary">
+          <span class="ico"></span> Copy Summary
+        </button>
+        <button class="btn" id="btnPdf" type="button" title="Print / Save as PDF">
+          <span class="ico"></span> Download PDF
+        </button>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- SCORE OVERVIEW -->
+      <section class="card" id="sec-scores">
+        <div class="cardHeader">
+          <h2><span class="mark"></span> Score Improvement Overview</h2>
+          <div class="hint">Before/after impact across overall + sub-scores</div>
+        </div>
+
+        <div class="cardBody">
+          <div class="kpiRow">
+            <div class="kpi">
+              <div>
+                <div class="label">Overall Readiness Score</div>
+                <div class="value"><span class="count" data-from="0" data-to="71">71</span><span class="arr">→</span><span class="count" data-from="0" data-to="97">97</span></div>
+              </div>
+              <div class="delta">+26 pts</div>
+            </div>
+
+            <div class="kpi">
+              <div>
+                <div class="label">COSMO Semantic Mapping</div>
+                <div class="value"><span class="count" data-from="0" data-to="78">78</span>%<span class="arr">→</span><span class="count" data-from="0" data-to="98">98</span>%</div>
+              </div>
+              <div class="delta">+20%</div>
+            </div>
+
+            <div class="kpi">
+              <div>
+                <div class="label">Rufus Q&A Coverage</div>
+                <div class="value"><span class="count" data-from="0" data-to="64">64</span>%<span class="arr">→</span><span class="count" data-from="0" data-to="96">96</span>%</div>
+              </div>
+              <div class="delta">+32%</div>
+            </div>
+          </div>
+
+          <div class="bars">
+            <div class="barRow">
+              <div class="name">Overall (Before)</div>
+              <div>
+                <div class="track"><div class="fill" data-width="71"></div></div>
+                <div class="nums">71 / 100</div>
+              </div>
+            </div>
+
+            <div class="barRow">
+              <div class="name">Overall (After)</div>
+              <div>
+                <div class="track"><div class="fill" data-width="97"></div></div>
+                <div class="nums">97 / 100</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="barRow">
+              <div class="name">COSMO (Before)</div>
+              <div>
+                <div class="track"><div class="fill blue" data-width="78"></div></div>
+                <div class="nums">78%</div>
+              </div>
+            </div>
+
+            <div class="barRow">
+              <div class="name">COSMO (After)</div>
+              <div>
+                <div class="track"><div class="fill blue" data-width="98"></div></div>
+                <div class="nums">98%</div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="barRow">
+              <div class="name">Rufus (Before)</div>
+              <div>
+                <div class="track"><div class="fill amber" data-width="64"></div></div>
+                <div class="nums">64%</div>
+              </div>
+            </div>
+
+            <div class="barRow">
+              <div class="name">Rufus (After)</div>
+              <div>
+                <div class="track"><div class="fill amber" data-width="96"></div></div>
+                <div class="nums">96%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GAP ANALYSIS -->
+      <section class="card" id="sec-gaps">
+        <div class="cardHeader">
+          <h2><span class="mark"></span> Gap Analysis → Implemented Fixes</h2>
+          <div class="hint">What was missing, and what was added to resolve it</div>
+        </div>
+
+        <div class="cardBody">
+          <div class="twoCol">
+            <div class="panel">
+              <div class="panelTitle">
+                <h3>❌ Content Gaps (Before)</h3>
+                <span class="tag">Key blockers</span>
+              </div>
+              <ul class="clean">
+                <li><span class="bad">Missing</span> care/cleaning instructions</li>
+                <li><span class="bad">Missing</span> pack contents (pair vs single)</li>
+                <li><span class="bad">Missing</span> quantified specs (padding thickness)</li>
+                <li><span class="warn">Partial</span> sizing guidance (limited guidance)</li>
+                <li><span class="warn">Partial</span> “fits under gloves” clarity</li>
+                <li><span class="warn">Weak</span> complementary gear clarity (pads/bag/mitts)</li>
+                <li><span class="bad">Missing</span> usage location (gym/home)</li>
+                <li><span class="bad">Missing</span> safety boundary for sparring</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <div class="panelTitle">
+                <h3>✅ Fixes Implemented (After)</h3>
+                <span class="tag">High-ROI updates</span>
+              </div>
+              <ul class="clean">
+                <li><span class="good">Added</span> 4mm dorsal gel padding specification</li>
+                <li><span class="good">Added</span> 100cm strap length</li>
+                <li><span class="good">Added</span> unpadded palm for grip/control</li>
+                <li><span class="good">Added</span> “pair included” (left & right)</li>
+                <li><span class="good">Added</span> hand circumference size chart (S–XL)</li>
+                <li><span class="good">Added</span> care rule (wipe clean) + ventilated storage</li>
+                <li><span class="good">Added</span> sparring guardrail (under gloves only)</li>
+                <li><span class="good">Added</span> usage locations (gym/club/home gym)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COSMO COVERAGE -->
+      <section class="card" id="sec-cosmo">
+        <div class="cardHeader">
+          <h2><span class="mark"></span> COSMO Semantic Coverage (Before vs After)</h2>
+          <div class="hint">Structured, machine-extractable relationships</div>
+        </div>
+
+        <div class="cardBody">
+          <div class="cosmoGrid">
+            <div class="cosmoRow">
+              <div class="k">Product Type</div>
+              <div class="badge b-ok">Before ✅</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Target Audience</div>
+              <div class="badge b-ok">Before ✅</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Used For (Function)</div>
+              <div class="badge b-ok">Before ✅</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Capable Of (Specs & Capabilities)</div>
+              <div class="badge b-ok">Before ✅</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Used With (Complementary)</div>
+              <div class="badge b-mid">Before ⚠️</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Compared To (Alternative)</div>
+              <div class="badge b-mid">Before ⚠️</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Used In (Location)</div>
+              <div class="badge b-no">Before ❌</div>
+              <div class="badge b-ok">After ✅</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Develops Skills (xEffect)</div>
+              <div class="badge b-mid">Before ⚠️</div>
+              <div class="badge b-mid">After ⚠️ (minor)</div>
+            </div>
+            <div class="cosmoRow">
+              <div class="k">Used On (Time/Season)</div>
+              <div class="badge b-no">Before ❌</div>
+              <div class="badge b-mid">After ⚠️ (minor)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RUFUS Q&A -->
+      <section class="card" id="sec-rufus">
+        <div class="cardHeader">
+          <h2><span class="mark"></span> Rufus Q&A Coverage Improvements</h2>
+          <div class="hint">High-intent buyer questions now answerable from text</div>
+        </div>
+
+        <div class="cardBody">
+          <div class="qGrid">
+            <div class="panel">
+              <div class="panelTitle">
+                <h3>Before</h3>
+                <span class="tag">64%</span>
+              </div>
+
+              <div class="qItem">
+                <span class="dot ok"></span>
+                <div>
+                  <div class="t">What is it?</div>
+                  <div class="d">Inner gloves / quick wraps for boxing & MMA training</div>
+                </div>
+              </div>
+
+              <div class="qItem" style="margin-top:10px">
+                <span class="dot ok"></span>
+                <div>
+                  <div class="t">Protection & wrist support?</div>
+                  <div class="d">Gel padding + 100cm strap mentioned</div>
+                </div>
+              </div>
+
+              <div class="qItem" style="margin-top:10px">
+                <span class="dot mid"></span>
+                <div>
+                  <div class="t">Sizing & fit under gloves?</div>
+                  <div class="d">Partially covered (limited guidance)</div>
+                </div>
+              </div>
+
+              <div class="qItem" style="margin-top:10px">
+                <span class="dot no"></span>
+                <div>
+                  <div class="t">Care, pack contents, quantified specs?</div>
+                  <div class="d">Missing (no explicit answers)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panelTitle">
+                <h3>After</h3>
+                <span class="tag">96%</span>
+              </div>
+
+              <div class="qItem">
+                <span class="dot ok"></span>
+                <div>
+                  <div class="t">Specs & construction</div>
+                  <div class="d">4mm dorsal gel, 100cm strap, unpadded palm, breathable design</div>
+                </div>
+              </div>
+
+              <div class="qItem" style="margin-top:10px">
+                <span class="dot ok"></span>
+                <div>
+                  <div class="t">What’s included?</div>
+                  <div class="d">Pair included (left & right)</div>
+                </div>
+              </div>
+
+              <div class="qItem" style="margin-top:10px">
+                <span class="dot ok"></span>
+                <div>
+                  <div class="t">Sizing</div>
+                  <div class="d">Hand circumference chart (S–XL)</div>
+                </div>
+              </div>
+
+              <div class="qItem" style="margin-top:10px">
+                <span class="dot ok"></span>
+                <div>
+                  <div class="t">Care & safety boundary</div>
+                  <div class="d">Wipe clean + ventilated storage; sparring under gloves only</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="panel">
+            <div class="panelTitle">
+              <h3>Why the lift happened</h3>
+              <span class="tag">Executive summary</span>
+            </div>
+            <ul class="clean">
+              <li><span class="good">Higher specificity</span>: “4mm”, “100cm”, dorsal placement, unpadded palm</li>
+              <li><span class="good">Decision clarity</span>: sizing chart + pack contents + care instructions</li>
+              <li><span class="good">Safety clarity</span>: sparring guardrail reduces ambiguity</li>
+              <li><span class="good">Context clarity</span>: gym/club/home + under-glove use</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT HIGHLIGHTS -->
+      <section class="card"  id="sec-highlights">
+        <div class="cardHeader">
+          <h2><span class="mark"></span> Before vs After — Content Highlights</h2>
+          <div class="hint">Short excerpts to demonstrate improvement (not full text)</div>
+        </div>
+
+        <div class="cardBody">
+          <div class="twoCol">
+            <div class="panel">
+              <div class="panelTitle">
+                <h3>Before (Example Excerpts)</h3>
+                <span class="tag">Less quantified</span>
+              </div>
+              <div class="scrollBox">
+                <p>• “gel padding that cushions impact”
+• “100cm long wrist strap provides solid wrist support”
+• Limited sizing note (S/M up to 14)
+• Missing: pack contents, care, padding thickness, palm construction, sizing chart</p>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panelTitle">
+                <h3>After (Example Excerpts)</h3>
+                <span class="tag">More structured</span>
+              </div>
+              <div class="scrollBox">
+                <p>• “4mm gel padding on the dorsal side of the hand”
+• “100cm hook-and-loop strap”
+• “Palms do not have any padding for better grip and control”
+• “Each set contains a pair (left + right)”
+• “Sizing: S 13–15cm, M 16–18cm, L 19–21cm, XL 22–23cm”
+• “Care: wipe clean; store ventilated/dry”
+• “Sparring: wear under boxing gloves”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL OUTCOME -->
+      <section class="card" id="sec-outcome">
+        <div class="cardHeader">
+          <h2><span class="mark"></span> Final Outcome</h2>
+          <div class="hint">Stakeholder-ready summary of value delivered</div>
+        </div>
+
+        <div class="cardBody">
+          <div class="panel">
+            <div class="panelTitle">
+              <h3>📈 Outcome Summary</h3>
+              <span class="tag">97 / 100</span>
+            </div>
+
+            <div class="chipRow">
+              <span class="chip"><strong>+26</strong> Overall lift</span>
+              <span class="chip"><strong>+20%</strong> COSMO mapping</span>
+              <span class="chip"><strong>+32%</strong> Rufus coverage</span>
+              <span class="chip">Structured attributes</span>
+              <span class="chip">Reduced ambiguity</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <ul class="clean">
+              <li><span class="good">Improved machine interpretability</span> using explicit specs + structured attributes</li>
+              <li><span class="good">Improved buyer decision clarity</span> (sizing, contents, care, intended use)</li>
+              <li><span class="good">Reduced ambiguity & safety risk</span> with sparring/standalone guardrail</li>
+              <li><span class="good">Near-perfect readiness</span> for semantic mapping + answer engine coverage</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /grid -->
+  </div><!-- /wrap -->
+
+  <script>
+    // ===== Print to PDF =====
+    document.getElementById('btnPdf').addEventListener('click', () => window.print());
+
+    // ===== Copy Summary =====
+    document.getElementById('btnShare').addEventListener('click', async () => {
+      const text =
+`COSMO–Rufus Upgrade Summary (HYP-IS2)
+Overall Readiness: 71 → 97 (+26)
+COSMO Mapping: 78% → 98% (+20%)
+Rufus Coverage: 64% → 96% (+32%)
+
+Key additions: 4mm dorsal gel spec, 100cm strap, unpadded palm for grip, pair included (L/R),
+hand circumference size chart (S–XL), care + ventilated storage, sparring guardrail, usage locations.`;
+      try{
+        await navigator.clipboard.writeText(text);
+        const btn = document.getElementById('btnShare');
+        const old = btn.innerHTML;
+        btn.innerHTML = '<span class="ico"></span> Copied!';
+        setTimeout(()=>btn.innerHTML=old, 1200);
+      }catch(e){
+        alert("Copy failed. Your browser may block clipboard access.");
+      }
+    });
+
+    // ===== Animate Bars =====
+    const fills = document.querySelectorAll('.fill[data-width]');
+    requestAnimationFrame(() => {
+      fills.forEach(el => el.style.width = (el.dataset.width || 0) + '%');
+    });
+
+    // ===== Count-up numbers =====
+    function animateCount(el, duration=900){
+      const from = Number(el.dataset.from || 0);
+      const to = Number(el.dataset.to || 0);
+      const start = performance.now();
+
+      function step(t){
+        const p = Math.min(1, (t - start) / duration);
+        // ease-out
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.round(from + (to - from) * eased);
+        el.textContent = String(val);
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const counters = document.querySelectorAll('.count[data-to]');
+    counters.forEach(el => animateCount(el, 900));
+// ===== Animate circular gauges (Before/After) =====
+(function(){
+  const gauges = document.querySelectorAll('.gauge[data-value]');
+  const CIRC = 289; // matches CSS dasharray for r=46
+  gauges.forEach(g => {
+    const val = Math.max(0, Math.min(100, Number(g.dataset.value || 0)));
+    const prog = g.querySelector('.gProg');
+    if(!prog) return;
+
+    // set baseline
+    prog.style.strokeDasharray = CIRC;
+    prog.style.strokeDashoffset = CIRC;
+
+    // animate next frame
+    requestAnimationFrame(() => {
+      const offset = CIRC * (1 - val/100);
+      prog.style.strokeDashoffset = offset;
+    });
+  });
+})();
+
+  </script>
+</body>
+</html>
